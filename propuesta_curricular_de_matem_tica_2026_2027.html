@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Temáticas de Matemática 2026-2027 | UE "Primero de Abril"</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#172554',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background: white !important; font-size: 12pt; }
+            .card-print { break-inside: avoid; border: 1px solid #e2e8f0 !important; shadow: none !important; }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col font-sans text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="bg-gradient-to-r from-brand-900 via-brand-800 to-indigo-900 text-white shadow-xl no-print relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white/10 p-3 rounded-2xl backdrop-blur-md border border-white/20 shadow-inner">
+                        <i class="fa-solid font-bold text-3xl sm:text-4xl text-amber-400 fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-400/20 text-amber-300 border border-amber-400/30 mb-1">
+                            Año Lectivo 2026 - 2027
+                        </span>
+                        <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+                            UNIDAD EDUCATIVA "PRIMERO DE ABRIL"
+                        </h1>
+                        <p class="text-xs sm:text-sm text-blue-200 flex items-center gap-2 mt-0.5">
+                            <span><i class="fa-solid fa-location-dot text-rose-400"></i> Latacunga - Cotopaxi</span>
+                            <span>•</span>
+                            <span><i class="fa-solid fa-square-root-variable text-emerald-400"></i> Área de Matemática y Física</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 pt-2 md:pt-0">
+                    <button onclick="openObjectivesModal()" class="flex-1 sm:flex-none inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-medium transition backdrop-blur-md border border-white/20 shadow-sm active:scale-95">
+                        <i class="fa-solid fa-bullseye mr-2 text-amber-400"></i>
+                        Objetivos de Referencia
+                    </button>
+                    <button onclick="window.print()" class="flex-1 sm:flex-none inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold text-xs sm:text-sm transition shadow-lg hover:shadow-amber-500/20 active:scale-95">
+                        <i class="fa-solid fa-print mr-2"></i>
+                        Imprimir / PDF
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Barra de autor e información de referencia -->
+            <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between text-xs text-blue-200 gap-2">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-user-gear text-amber-400"></i>
+                    <span>Elaborado por: <strong>Mg. Alejandro Mantilla</strong> (Coordinador de Área)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-book-bookmark text-emerald-400"></i>
+                    <span>Basado en el Currículo Priorizado con Énfasis en Competencias (2025)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6">
+
+        <!-- Banner de Filtros y Búsqueda -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-4 sm:p-5 no-print">
+            <div class="flex flex-col lg:flex-row gap-4 justify-between items-stretch lg:items-center">
+                
+                <!-- Selectores de Nivel y Año -->
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 flex-1">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 w-full sm:w-auto mr-1">Seleccionar:</span>
+                    
+                    <!-- Subnivel EGB Superior -->
+                    <div class="inline-flex rounded-xl p-1 bg-slate-100 border border-slate-200 w-full sm:w-auto">
+                        <button id="btn-egb" onclick="switchLevel('EGB')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-600 hover:text-brand-700">
+                            EGB Superior
+                        </button>
+                        <button id="btn-bgu" onclick="switchLevel('BGU')" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-600 hover:text-brand-700">
+                            Bachillerato (BGU)
+                        </button>
+                    </div>
+
+                    <div class="h-6 w-px bg-slate-200 hidden sm:block"></div>
+
+                    <!-- Botones de Años lectivos -->
+                    <div id="years-container" class="flex flex-wrap gap-1.5 w-full sm:w-auto">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+
+                <!-- Buscador Global -->
+                <div class="relative w-full lg:w-80">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input type="text" id="global-search" oninput="handleSearch(this.value)" placeholder="Buscar tema, DCD (ej: M.4.1.1)..." class="w-full pl-9 pr-8 py-2 bg-slate-50 hover:bg-slate-100/80 focus:bg-white text-xs sm:text-sm text-slate-800 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+                    <button id="clear-search-btn" onclick="clearSearch()" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Indicador de estado de búsqueda -->
+            <div id="search-info" class="hidden mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <span>Resultados de búsqueda para: "<strong id="search-query-text" class="text-brand-600"></strong>"</span>
+                <span id="search-count" class="font-semibold bg-brand-50 text-brand-700 px-2.5 py-0.5 rounded-full">0 coincidencias</span>
+            </div>
+        </section>
+
+        <section class="flex-1">
+            <!-- Título del año activo -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                <div>
+                    <h2 id="current-year-title" class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2.5">
+                        <span class="w-3 h-8 bg-brand-600 rounded-full inline-block"></span>
+                        Cargando...
+                    </h2>
+                    <p id="current-year-subtitle" class="text-xs sm:text-sm text-slate-500 mt-0.5 ml-5">
+                        Distribución analítica curricular por Unidades Didácticas
+                    </p>
+                </div>
+                <div class="flex items-center gap-2 self-start sm:self-auto text-xs font-medium text-slate-500">
+                    <span class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 shadow-sm"><strong class="text-brand-600">6</strong> Unidades Didácticas</span>
+                    <span class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 shadow-sm"><strong class="text-brand-600">24</strong> Temáticas clave</span>
+                </div>
+            </div>
+
+            <!-- Grid de Unidades Didácticas -->
+            <div id="units-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Tarjetas generadas dinámicamente -->
+            </div>
+
+            <!-- Mensaje de no resultados -->
+            <div id="no-results" class="hidden bg-white rounded-2xl border border-dashed border-slate-300 p-12 text-center my-8">
+                <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400 text-2xl mb-4">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">No se encontraron coincidencia de contenidos</h3>
+                <p class="text-xs text-slate-500 mt-1 max-w-sm mx-auto">Prueba buscando con otros términos o códigos de DCD (ejemplo: M.4.1.26, vectores, inecuaciones, tasa de interés).</p>
+                <button onclick="clearSearch()" class="mt-4 px-4 py-2 bg-brand-50 text-brand-600 text-xs font-bold rounded-xl hover:bg-brand-100 transition">
+                    Restablecer búsqueda
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200/80 py-6 no-print mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                <span class="font-medium text-slate-700">Unidad Educativa "Primero de Abril"</span>
+                <span>• Latacunga - Ecuador</span>
+            </div>
+            <p>Área de Matemática y Física | Propuesta de Temáticas Lectivas 2026 - 2027</p>
+        </div>
+    </footer>
+
+    <div id="objectives-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden transition-opacity duration-200 opacity-0" onclick="closeObjectivesModal(event)">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden transform transition-all scale-95" onclick="event.stopPropagation()">
+            
+            <!-- Modal Header -->
+            <div class="px-6 py-5 bg-gradient-to-r from-brand-900 to-indigo-900 text-white flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white/10 p-2.5 rounded-xl">
+                        <i class="fa-solid fa-bullseye text-amber-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Objetivos Curriculares de Referencia</h3>
+                        <p class="text-xs text-blue-200">Ministerio de Educación del Ecuador - Currículo Priorizado</p>
+                    </div>
+                </div>
+                <button onclick="closeObjectivesModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Modal Tabs -->
+            <div class="px-6 pt-4 border-b border-slate-200 flex gap-4 bg-slate-50">
+                <button id="modal-tab-egb" onclick="switchModalTab('EGB')" class="pb-3 text-xs sm:text-sm font-bold border-b-2 border-brand-600 text-brand-600 transition">
+                    Básica Superior (O.M.4.x)
+                </button>
+                <button id="modal-tab-bgu" onclick="switchModalTab('BGU')" class="pb-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-700 transition">
+                    Bachillerato General Unificado (O.M.5.x / OG.M.x)
+                </button>
+            </div>
+
+            <!-- Modal Body Scrollable -->
+            <div id="modal-content" class="p-6 overflow-y-auto custom-scrollbar flex-1 space-y-3">
+                <!-- Se llenará con Javascript -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end">
+                <button onclick="closeObjectivesModal()" class="px-5 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs font-bold transition">
+                    Cerrar Consulta
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // BASE DE DATOS COMPLETA DE LA PROPUESTA CURRICULAR
+        const curriculumData = {
+            "EGB": {
+                name: "Educación General Básica Superior",
+                years: {
+                    "8EGB": {
+                        title: "8.º Año de Educación General Básica",
+                        short: "8.º EGB",
+                        units: [
+                            {
+                                id: 1,
+                                title: "Números Enteros y sus Operaciones",
+                                themes: [
+                                    "1. Conjunto de números enteros Z y su orden",
+                                    "2. Operaciones básicas en Z",
+                                    "3. Propiedades algebraicas de las operaciones",
+                                    "4. Potenciación con exponentes naturales"
+                                ],
+                                dcd: ["M.4.1.1", "M.4.1.2", "M.4.1.3", "M.4.1.4", "M.4.1.5"],
+                                objectives: ["O.M.4.1", "O.M.4.2", "O.M.4.4"]
+                            },
+                            {
+                                id: 2,
+                                title: "Ecuaciones e Inecuaciones en Z",
+                                themes: [
+                                    "1. Expresión de enunciados simples en lenguaje matemático",
+                                    "2. Suma de monomios y multiplicación de términos algebraicos",
+                                    "3. Ecuaciones de primer grado con una incógnita en Z",
+                                    "4. Inecuaciones de primer grado en Z"
+                                ],
+                                dcd: ["M.4.1.8", "M.4.1.9", "M.4.1.10", "M.4.1.11"],
+                                objectives: ["O.M.4.1", "O.M.4.3"]
+                            },
+                            {
+                                id: 3,
+                                title: "Números Racionales y sus Operaciones",
+                                themes: [
+                                    "1. Representación y reconocimiento de números racionales Q",
+                                    "2. Relación de orden en el conjunto Q",
+                                    "3. Adición y multiplicación en Q",
+                                    "4. Potenciación con exponentes enteros"
+                                ],
+                                dcd: ["M.4.1.14", "M.4.1.15", "M.4.1.16", "M.4.1.17", "M.4.1.18"],
+                                objectives: ["O.M.4.1", "O.M.4.2", "O.M.4.4"]
+                            },
+                            {
+                                id: 4,
+                                title: "Ecuaciones en Q y Educación Financiera Inicial",
+                                themes: [
+                                    "1. Ecuaciones de primer grado en Q",
+                                    "2. Inecuaciones de primer grado en Q de forma algebraica",
+                                    "3. Formas de pago (efectivo y medios digitales)",
+                                    "4. Funcionamiento de cajeros automáticos, tarjetas de crédito y débito"
+                                ],
+                                dcd: ["M.4.1.20", "M.4.1.21", "M.4.1.64", "M.4.1.65"],
+                                objectives: ["O.M.4.1", "O.M.4.3"]
+                            },
+                            {
+                                id: 5,
+                                title: "Geometría de Triángulos y Puntos Notables",
+                                themes: [
+                                    "1. Clasificación y construcción de triángulos (regla y compás)",
+                                    "2. Congruencia de triángulos y sus criterios",
+                                    "3. Construcción de medianas, mediatrices, alturas y bisectrices",
+                                    "4. Identificación de baricentro, circuncentro, ortocentro e incentro"
+                                ],
+                                dcd: ["M.4.2.8", "M.4.2.9", "M.4.2.12", "M.4.2.13"],
+                                objectives: ["O.M.4.5"]
+                            },
+                            {
+                                id: 6,
+                                title: "Estadística Descriptiva Básica",
+                                themes: [
+                                    "1. Organización de datos procesados en tablas de frecuencias",
+                                    "2. Distribución de frecuencias para datos agrupados y no agrupados",
+                                    "3. Representación gráfica con TIC (histogramas, ojiva, diagramas circulares)",
+                                    "4. Metodología de investigación: estadística descriptiva"
+                                ],
+                                dcd: ["M.4.3.1", "M.4.3.2", "M.4.3.3", "M.4.3.4"],
+                                objectives: ["O.M.4.7"]
+                            }
+                        ]
+                    },
+                    "9EGB": {
+                        title: "9.º Año de Educación General Básica",
+                        short: "9.º EGB",
+                        units: [
+                            {
+                                id: 1,
+                                title: "Números Reales e Intervalos",
+                                themes: [
+                                    "1. Números irracionales e identificación de sus elementos",
+                                    "2. Aproximación de números reales a decimales",
+                                    "3. Relación de orden en el conjunto R",
+                                    "4. Representación analítica y gráfica de intervalos en R"
+                                ],
+                                dcd: ["M.4.1.26", "M.4.1.29", "M.4.1.30", "M.4.1.39"],
+                                objectives: ["O.M.4.1", "O.M.4.3", "O.M.4.4"]
+                            },
+                            {
+                                id: 2,
+                                title: "Operaciones con Números Reales y Polinomios",
+                                themes: [
+                                    "1. Adición y multiplicación en R con términos algebraicos",
+                                    "2. Expresiones algebraicas usando operaciones básicas en R",
+                                    "3. Polinomios de grado menor o igual a 2 (adición y producto por escalar)",
+                                    "4. Potencias de números reales con exponentes enteros y notación científica"
+                                ],
+                                dcd: ["M.4.1.31", "M.4.1.32", "M.4.1.24", "M.4.1.34"],
+                                objectives: ["O.M.4.2", "O.M.4.4"]
+                            },
+                            {
+                                id: 3,
+                                title: "Álgebra en R y Educación Financiera Intermedia",
+                                themes: [
+                                    "1. Productos notables de expresiones algebraicas",
+                                    "2. Factores de expresiones algebraicas (factorización)",
+                                    "3. Ecuaciones de primer grado en R",
+                                    "4. Impacto de planes de gasto y prioridades financieras"
+                                ],
+                                dcd: ["M.4.1.33", "M.4.1.38", "M.4.1.66"],
+                                objectives: ["O.M.4.2", "O.M.4.3"]
+                            },
+                            {
+                                id: 4,
+                                title: "Relaciones y Funciones Lineales",
+                                themes: [
+                                    "1. Producto cartesiano y definición de relaciones binarias",
+                                    "2. Representación gráfica de funciones (barras, bastones y circulares)",
+                                    "3. Modelos matemáticos sencillos como funciones",
+                                    "4. Funciones lineales en Z y análisis de monotonía"
+                                ],
+                                dcd: ["M.4.1.42", "M.4.1.45", "M.4.1.46", "M.4.1.47"],
+                                objectives: ["O.M.4.1", "O.M.4.3"]
+                            },
+                            {
+                                id: 5,
+                                title: "Semejanza de Figuras y Lógica Proposicional",
+                                themes: [
+                                    "1. Figuras semejantes y escala (Teorema de Tales)",
+                                    "2. Semejanza en cálculo de longitudes y problemas geométricos",
+                                    "3. Proposiciones simples y conectivos lógicos (negación, conjunción, disyunción)",
+                                    "4. Tautologías y construcción de tablas de verdad"
+                                ],
+                                dcd: ["M.4.2.5", "M.4.2.6", "M.4.2.1", "M.4.2.2"],
+                                objectives: ["O.M.4.1", "O.M.4.5"]
+                            },
+                            {
+                                id: 6,
+                                title: "Variables y Medidas de Tendencia Central",
+                                themes: [
+                                    "1. Definición y uso de variables cualitativas y cuantitativas",
+                                    "2. Media, mediana y moda en la solución de problemas",
+                                    "3. Medidas de dispersión: rango, varianza y desviación estándar",
+                                    "4. Espacios de vida sostenibles y datos estadísticos"
+                                ],
+                                dcd: ["M.4.3.5", "M.4.3.7", "M.4.3.13"],
+                                objectives: ["O.M.4.7"]
+                            }
+                        ]
+                    },
+                    "10EGB": {
+                        title: "10.º Año de Educación General Básica",
+                        short: "10.º EGB",
+                        units: [
+                            {
+                                id: 1,
+                                title: "Funciones Reales y Racionalización",
+                                themes: [
+                                    "1. Racionalización de expresiones algebraicas y raíces en denominador",
+                                    "2. Funciones crecientes y decrecientes a partir de gráficas",
+                                    "3. Definición de función real (dominio, recorrido, cortes con los ejes)",
+                                    "4. Función lineal de forma algebraica, gráfica y pendiente"
+                                ],
+                                dcd: ["M.4.1.36", "M.4.1.48", "M.4.1.49", "M.4.1.50"],
+                                objectives: ["O.M.4.1", "O.M.4.3"]
+                            },
+                            {
+                                id: 2,
+                                title: "Sistemas de Ecuaciones Lineales 2x2",
+                                themes: [
+                                    "1. La recta como solución de ecuación lineal con dos variables",
+                                    "2. Intersección de dos rectas como solución gráfica del sistema 2x2",
+                                    "3. Métodos algebraicos de resolución: determinantes (Cramer), igualación y eliminación gaussiana",
+                                    "4. Problemas de aplicación con enunciados prácticos"
+                                ],
+                                dcd: ["M.4.1.53", "M.4.1.54", "M.4.1.55", "M.4.1.56"],
+                                objectives: ["O.M.4.3"]
+                            },
+                            {
+                                id: 3,
+                                title: "Funciones Cuadráticas y Pitágoras",
+                                themes: [
+                                    "1. Función cuadrática de forma algebraica y gráfica (dominio, rango, vértice, monotonía)",
+                                    "2. Ecuación de segundo grado de manera analítica (factoreo, fórmula general)",
+                                    "3. Estrategias individuales y grupales de cálculo mental y escrito",
+                                    "4. Teorema de Pitágoras en triángulos rectángulos"
+                                ],
+                                dcd: ["M.4.1.57", "M.4.1.59", "M.4.1.63", "M.4.2.15"],
+                                objectives: ["O.M.4.3", "O.M.4.5"]
+                            },
+                            {
+                                id: 4,
+                                title: "Razones Trigonométricas y Cuerpos Geométricos",
+                                themes: [
+                                    "1. Relaciones trigonométricas en el triángulo rectángulo (seno, coseno, tangente)",
+                                    "2. Área de polígonos regulares por descomposición en triángulos",
+                                    "3. Redes y patrones 2D para pirámides, prismas, conos y cilindros",
+                                    "4. Volumen de pirámides, prismas, conos y cilindros"
+                                ],
+                                dcd: ["M.4.2.16", "M.4.2.18", "M.4.2.20", "M.4.2.21"],
+                                objectives: ["O.M.4.5", "O.M.4.6"]
+                            },
+                            {
+                                id: 5,
+                                title: "Leyes de Lógica, Conjuntos y Presupuestos",
+                                themes: [
+                                    "1. Leyes de la lógica proposicional en la solución de problemas",
+                                    "2. Conjuntos y operaciones algebraicas y gráficas (unión, intersección, diferencia, complemento)",
+                                    "3. Elaboración de presupuestos individuales y grupales",
+                                    "4. Concepto de probabilidad empírica y azar"
+                                ],
+                                dcd: ["M.4.2.3", "M.4.2.4", "M.4.3.14", "M.4.3.9"],
+                                objectives: ["O.M.4.1", "O.M.4.7"]
+                            },
+                            {
+                                id: 6,
+                                title: "Probabilidad y Métodos de Conteo Avanzados",
+                                themes: [
+                                    "1. Métodos de conteo (combinaciones y permutaciones) en probabilidad",
+                                    "2. Factorial de un número y coeficiente binomial",
+                                    "3. Operaciones con eventos y Leyes de De Morgan",
+                                    "4. Perímetro y área de triángulos"
+                                ],
+                                dcd: ["M.4.3.10", "M.4.3.11", "M.4.3.12", "M.4.2.11"],
+                                objectives: ["O.M.4.5", "O.M.4.7"]
+                            }
+                        ]
+                    }
+                }
+            },
+            "BGU": {
+                name: "Bachillerato General Unificado",
+                years: {
+                    "1BGU": {
+                        title: "1.º Año de Bachillerato General Unificado",
+                        short: "1.º BGU",
+                        units: [
+                            {
+                                id: 1,
+                                title: "Números Reales, Exponentes y Polinomios",
+                                themes: [
+                                    "1. Propiedades algebraicas de los números reales en expresiones",
+                                    "2. Productos notables y factorización de expresiones algebraicas",
+                                    "3. Propiedades algebraicas de la potenciación de números reales",
+                                    "4. Operaciones básicas con intervalos en la recta numérica"
+                                ],
+                                dcd: ["M.5.1.1", "M.5.1.2", "M.5.1.7"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.3/OG.M.3"]
+                            },
+                            {
+                                id: 2,
+                                title: "Inecuaciones, Ecuaciones y Finanzas",
+                                themes: [
+                                    "1. Ecuaciones e inecuaciones de primer grado con una incógnita y valor absoluto",
+                                    "2. Capacidad de pago mensual en función de ingresos y gastos",
+                                    "3. Tasas de interés y plazos de crédito",
+                                    "4. Modelización con funciones lineales de metas financieras"
+                                ],
+                                dcd: ["M.5.1.8", "M.5.1.79", "I.M.5.1.3", "M.5.1.80"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.3/OG.M.3"]
+                            },
+                            {
+                                id: 3,
+                                title: "Sistemas Lineales 2x2 y Funciones Elementales",
+                                themes: [
+                                    "1. Sistemas de dos ecuaciones lineales con dos incógnitas por varios métodos",
+                                    "2. Graficación y análisis de funciones reales (dominio, recorrido, monotonía, ceros, extremos, paridad)",
+                                    "3. Modelización con funciones raíz cuadrada y valor absoluto",
+                                    "4. Operaciones de adición y multiplicación de funciones reales"
+                                ],
+                                dcd: ["M.5.1.6", "M.5.1.20", "M.5.1.22", "M.5.1.25"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.2/OG.M.2", "O.M.5.5/OG.M.5"]
+                            },
+                            {
+                                id: 4,
+                                title: "Funciones Especiales e Introducción Intuitiva a Límites y Derivadas",
+                                themes: [
+                                    "1. Funciones inyectivas, sobreyectivas, biyectivas y función inversa",
+                                    "2. Intersección de recta y parábola y modelización de problemas cuadráticos",
+                                    "3. Concepto intuitivo de límite de función cuadrática con calculadora",
+                                    "4. Cálculo intuitivo de derivada de funciones cuadráticas por cociente incremental"
+                                ],
+                                dcd: ["M.5.1.23", "M.5.1.27", "M.5.1.28", "M.5.1.31", "M.5.1.32", "M.5.1.33"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.2/OG.M.2", "O.M.5.6/OG.M.6"]
+                            },
+                            {
+                                id: 5,
+                                title: "Vectores Geométricos en R2",
+                                themes: [
+                                    "1. Graficación de vectores en el plano (dirección, sentido, longitud)",
+                                    "2. Longitud o norma con el teorema de Pitágoras e igualdad vectorial",
+                                    "3. Suma, resta de vectores y producto de un escalar por un vector",
+                                    "4. Los vectores como elementos geométricos de R2"
+                                ],
+                                dcd: ["M.5.2.1", "M.5.2.2", "M.5.2.3", "M.5.2.6"],
+                                objectives: ["O.M.5.3/OG.M.3", "O.M.5.6/OG.M.6"]
+                            },
+                            {
+                                id: 6,
+                                title: "Estadística Descriptiva Básica",
+                                themes: [
+                                    "1. Cálculo e interpretación de media, mediana, moda, rango, varianza y desviación estándar",
+                                    "2. Resolución y planteamiento de problemas con medidas de dispersión con TIC",
+                                    "3. Coeficiente de variación de un conjunto de datos agrupados y no agrupados",
+                                    "4. Determinación de cuantiles (cuartiles, deciles, percentiles) para análisis"
+                                ],
+                                dcd: ["M.5.3.1", "M.5.3.2", "M.5.3.4", "M.5.3.5"],
+                                objectives: ["O.M.5.2/OG.M.2", "O.M.5.4/OG.M.4"]
+                            }
+                        ]
+                    },
+                    "2BGU": {
+                        title: "2.º Año de Bachillerato General Unificado",
+                        short: "2.º BGU",
+                        units: [
+                            {
+                                id: 1,
+                                title: "Complemento de Cálculo Diferencial: Derivadas de Polinomios",
+                                themes: [
+                                    "1. Derivada de funciones polinomiales (grado ≤ 4) por cociente incremental",
+                                    "2. Interpretación geométrica de la primera derivada como la pendiente de la tangente",
+                                    "3. Interpretación física de la primera y segunda derivada (velocidad y aceleración)",
+                                    "4. Optimización y resolución de problemas prácticos con derivadas polinomiales"
+                                ],
+                                dcd: ["M.5.1.35", "M.5.1.36", "M.5.1.37", "M.5.1.47", "M.5.1.49"],
+                                objectives: ["O.M.5.4/OG.M.4", "O.M.5.6/OG.M.6"]
+                            },
+                            {
+                                id: 2,
+                                title: "Sistemas de Ecuaciones Lineales 3x3",
+                                themes: [
+                                    "1. Sistemas de tres ecuaciones con tres incógnitas por sustitución o eliminación gaussiana",
+                                    "2. Sistemas de dos ecuaciones con tres incógnitas y análisis de soluciones",
+                                    "3. Métodos alternativos de resolución analítica (sustitución, determinantes no matriciales)",
+                                    "4. Planteamiento de problemas de aplicación de sistemas 3x3 en la realidad"
+                                ],
+                                dcd: ["M.5.1.10", "M.5.1.11"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.3/OG.M.3"]
+                            },
+                            {
+                                id: 3,
+                                title: "Polinomios, Funciones Racionales y sus Derivadas",
+                                themes: [
+                                    "1. Operaciones con polinomios ≤ 4, esquema de Hörner y teorema del residuo",
+                                    "2. Dominio, rango, asíntotas de funciones racionales (grado ≤ 3)",
+                                    "3. Operaciones de suma y multiplicación entre funciones racionales y simplificación",
+                                    "4. Derivada de funciones racionales (grado ≤ 2) para análisis de monotonía y extremos"
+                                ],
+                                dcd: ["M.5.1.40", "M.5.1.44", "M.5.1.45", "M.5.1.51", "M.5.3.26"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.2/OG.M.2", "O.M.5.5/OG.M.5"]
+                            },
+                            {
+                                id: 4,
+                                title: "Funciones Exponenciales, Logarítmicas y Trigonométricas",
+                                themes: [
+                                    "1. Funciones trigonométricas, representaciones gráficas y propiedades con TIC",
+                                    "2. Funciones exponenciales, características, monotonía y comportamiento al infinito",
+                                    "3. Función logarítmica como inversa de la exponencial y gráficas",
+                                    "4. Propiedades de exponentes y logaritmos en ecuaciones e inecuaciones"
+                                ],
+                                dcd: ["M.5.1.72", "M.5.1.74", "M.5.1.75", "M.5.1.77", "M.5.1.78"],
+                                objectives: ["O.M.5.2/OG.M.2", "O.M.5.4/OG.M.4", "O.M.5.5/OG.M.5"]
+                            },
+                            {
+                                id: 5,
+                                title: "Geometría de la Recta y Cónicas en R2",
+                                themes: [
+                                    "1. Ecuación vectorial y paramétrica de una recta en R2",
+                                    "2. Pendiente y ecuaciones cartesiana y general de la recta",
+                                    "3. Posición relativa de dos rectas en R2 (paralelas, perpendiculares, secantes)",
+                                    "4. Ecuaciones cartesianas de la circunferencia, parábola, elipse e hipérbola"
+                                ],
+                                dcd: ["M.5.2.9", "M.5.2.10", "M.5.2.11", "M.5.2.14", "M.5.2.17"],
+                                objectives: ["O.M.5.4/OG.M.4", "O.M.5.5/OG.M.5", "O.M.5.6/OG.M.6"]
+                            },
+                            {
+                                id: 6,
+                                title: "Probabilidades y Eventos",
+                                themes: [
+                                    "1. Experimentos, eventos y concepto empírico y axiomático de probabilidad",
+                                    "2. Técnicas de conteo: permutaciones y combinaciones en probabilidades",
+                                    "3. Variables aleatorias como función real de manera intuitiva y formal",
+                                    "4. Explicación y justificación asertiva de resultados probabilísticos"
+                                ],
+                                dcd: ["M.5.3.7", "M.5.3.11", "M.5.3.12", "M.5.3.28"],
+                                objectives: ["O.M.5.2/OG.M.2", "O.M.5.5/OG.M.5"]
+                            }
+                        ]
+                    },
+                    "3BGU": {
+                        title: "3.º Año de Bachillerato General Unificado",
+                        short: "3.º BGU",
+                        units: [
+                            {
+                                id: 1,
+                                title: "Vectores y Planos en el Espacio R3",
+                                themes: [
+                                    "1. Producto escalar y norma de un vector en R3 (distancia entre puntos)",
+                                    "2. Ecuación vectorial y paramétrica de una recta en R3",
+                                    "3. Paralelismo y perpendicularidad de dos planos en R3 y sus intersecciones",
+                                    "4. Aplicaciones geométricas de vectores, rectas y planos en el espacio"
+                                ],
+                                dcd: ["M.5.2.19", "M.5.2.20", "M.5.2.23", "M.5.2.8", "M.5.2.15"],
+                                objectives: ["O.M.5.3/OG.M.3", "O.M.5.6/OG.M.6"]
+                            },
+                            {
+                                id: 2,
+                                title: "Programación Lineal",
+                                themes: [
+                                    "1. Sistemas de inecuaciones lineales y delimitación de soluciones factibles",
+                                    "2. Solución gráfica y analítica de problemas de programación lineal",
+                                    "3. Determinación de puntos extremos y hallazgo de la solución óptima",
+                                    "4. Modelización de problemas reales (línea de producción, transporte, industria química)"
+                                ],
+                                dcd: ["M.5.2.26", "M.5.2.27"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.2/OG.M.2"]
+                            },
+                            {
+                                id: 3,
+                                title: "Sucesiones, Progresiones y Matemática Financiera",
+                                themes: [
+                                    "1. Sucesiones numéricas reales, monótonas y definidas por recurrencia",
+                                    "2. Progresiones aritméticas, geométricas y sumas parciales finitas",
+                                    "3. Aplicaciones de sucesiones y progresiones en el ámbito financiero local",
+                                    "4. Álgebra de límites de sucesiones convergentes y su aplicación al interés compuesto"
+                                ],
+                                dcd: ["M.5.1.53", "M.5.1.55", "M.5.1.56", "M.5.1.58", "M.5.1.61"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.2/OG.M.2", "O.M.5.3/OG.M.3"]
+                            },
+                            {
+                                id: 4,
+                                title: "Álgebra Matricial, Determinantes y Matriz Inversa",
+                                themes: [
+                                    "1. Concepto del conjunto de matrices M2x2 reales y matrices especiales (nula, identidad)",
+                                    "2. Operaciones algebraicas de adición, resta y producto de matrices reales",
+                                    "3. Determinantes de matrices reales cuadradas de orden 2 y 3",
+                                    "4. Matriz inversa A-1 mediante método de Gauss y producto de matriz por vector"
+                                ],
+                                dcd: ["M.5.1.14", "M.5.1.15", "M.5.1.16", "M.5.1.17", "M.5.1.18", "M.5.1.19"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.3/OG.M.3", "O.M.5.4/OG.M.4"]
+                            },
+                            {
+                                id: 5,
+                                title: "Cálculo Integral y Aplicaciones Sociales",
+                                themes: [
+                                    "1. Integral definida de una función escalonada y sus propiedades con límites de integración",
+                                    "2. Interpretación geométrica de la integral como superficie limitada por curva y eje x",
+                                    "3. Incidencia de la planificación urbana y rural en la vida cotidiana evaluando datos",
+                                    "4. Solución de problemas cotidianos mediante modelos matemáticos integrados"
+                                ],
+                                dcd: ["M.5.1.64", "M.5.1.65", "M.5.3.29", "M.5.3.26"],
+                                objectives: ["O.M.5.1/OG.M.1", "O.M.5.2/OG.M.2", "O.M.5.5/OG.M.5"]
+                            },
+                            {
+                                id: 6,
+                                title: "Variables Aleatorias Discretas y Distribución Binomial",
+                                themes: [
+                                    "1. Media, varianza y desviación estándar de una variable aleatoria discreta",
+                                    "2. Probabilidades binomiales con fórmulas y TIC en distribuciones binomiales",
+                                    "3. Covarianza de dos variables aleatorias y dependencia lineal (bidimensional)",
+                                    "4. Presentación asertiva de resultados de análisis estadísticos a diferentes audiencias"
+                                ],
+                                dcd: ["M.5.3.15", "M.5.3.16", "M.5.3.20", "M.5.3.21", "M.5.3.22", "M.5.3.27"],
+                                objectives: ["O.M.5.2/OG.M.2", "O.M.5.4/OG.M.4"]
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+
+        const referenceObjectives = {
+            "EGB": [
+                { code: "O.M.4.1", desc: "Reconocer relaciones en conjuntos numéricos (Z, Q, I, R), ordenar y operar para procesos algebraicos y funciones." },
+                { code: "O.M.4.2", desc: "Aplicar propiedades algebraicas, cuatro operaciones básicas, potenciación y radicación en polinomios." },
+                { code: "O.M.4.3", desc: "Representar y resolver gráfica y analíticamente ecuaciones, inecuaciones y sistemas lineales 2x2." },
+                { code: "O.M.4.4", desc: "Aplicar operaciones, radicación y potenciación en R en la resolución de problemas." },
+                { code: "O.M.4.5", desc: "Aplicar teorema de Pitágoras para relaciones trigonométricas y fórmulas de perímetro, área y volumen." },
+                { code: "O.M.4.6", desc: "Aplicar conversiones de unidades del SI para medición, cálculo de áreas y volúmenes." },
+                { code: "O.M.4.7", desc: "Representar, analizar e interpretar datos estadísticos y probabilísticos con el uso de las TIC." }
+            ],
+            "BGU": [
+                { code: "O.M.5.1 / OG.M.1", desc: "Proponer soluciones creativas mediante operaciones de conjuntos numéricos, modelos funcionales y razonamiento lógico." },
+                { code: "O.M.5.2 / OG.M.2", desc: "Producir, comunicar y generalizar información de forma simbólica, gráfica y tecnológica con honestidad." },
+                { code: "O.M.5.3 / OG.M.3", desc: "Desarrollar cálculo mental y escrito, exacto o estimado, y resolver situaciones problémicas." },
+                { code: "O.M.5.4 / OG.M.4", desc: "Valorar el empleo de las TIC para resolver problemas críticos de la realidad nacional y juzgar resultados." },
+                { code: "O.M.5.5 / OG.M.5", desc: "Vincular conocimientos matemáticos con otras disciplinas y saberes ancestrales para solucionar problemas del entorno." },
+                { code: "O.M.5.6 / OG.M.6", desc: "Desarrollar curiosidad y creatividad en el uso de herramientas matemáticas con orden y perseverancia." }
+            ]
+        };
+
+        // Estado de la aplicación
+        let currentLevel = "EGB";
+        let currentYearKey = "8EGB";
+        let searchQuery = "";
+        let currentModalTab = "EGB";
+
+        // Inicialización al cargar página
+        window.onload = function() {
+            renderYearButtons();
+            renderContent();
+            renderModalContent();
+        };
+
+        function switchLevel(level) {
+            currentLevel = level;
+            const yearsKeys = Object.keys(curriculumData[level].years);
+            currentYearKey = yearsKeys[0];
+            
+            // Actualizar botones de nivel
+            const btnEgb = document.getElementById('btn-egb');
+            const btnBgu = document.getElementById('btn-bgu');
+            
+            if (level === 'EGB') {
+                btnEgb.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-white text-brand-700 shadow-sm';
+                btnBgu.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-600 hover:text-brand-700';
+            } else {
+                btnBgu.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-white text-brand-700 shadow-sm';
+                btnEgb.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-600 hover:text-brand-700';
+            }
+
+            renderYearButtons();
+            renderContent();
+        }
+
+        function renderYearButtons() {
+            const container = document.getElementById('years-container');
+            container.innerHTML = '';
+            
+            const yearsObj = curriculumData[currentLevel].years;
+            Object.keys(yearsObj).forEach(key => {
+                const yearData = yearsObj[key];
+                const isActive = key === currentYearKey;
+                
+                const btn = document.createElement('button');
+                btn.onclick = () => selectYear(key);
+                btn.className = isActive 
+                    ? 'px-3 py-1.5 rounded-xl text-xs font-bold bg-brand-600 text-white shadow-md shadow-brand-500/20 transition-all scale-105'
+                    : 'px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all';
+                btn.innerText = yearData.short;
+                container.appendChild(btn);
+            });
+        }
+
+        function selectYear(key) {
+            currentYearKey = key;
+            renderYearButtons();
+            renderContent();
+        }
+
+        function handleSearch(val) {
+            searchQuery = val.trim().toLowerCase();
+            const clearBtn = document.getElementById('clear-search-btn');
+            const searchInfo = document.getElementById('search-info');
+            const searchQueryText = document.getElementById('search-query-text');
+
+            if (searchQuery.length > 0) {
+                clearBtn.classList.remove('hidden');
+                searchInfo.classList.remove('hidden');
+                searchQueryText.innerText = searchQuery;
+            } else {
+                clearBtn.classList.add('hidden');
+                searchInfo.classList.add('hidden');
+            }
+
+            renderContent();
+        }
+
+        function clearSearch() {
+            document.getElementById('global-search').value = '';
+            searchQuery = '';
+            document.getElementById('clear-search-btn').classList.add('hidden');
+            document.getElementById('search-info').classList.add('hidden');
+            renderContent();
+        }
+
+        function highlightMatch(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(`(${query.replace(/[-[\]{}()*+? validation?:\^$|#\s]/g, '\\$&')})`, 'gi');
+            return text.replace(regex, '<mark class="bg-amber-200 text-amber-900 rounded-sm px-0.5">$1</mark>');
+        }
+
+        function renderContent() {
+            const grid = document.getElementById('units-grid');
+            const noResults = document.getElementById('no-results');
+            const titleEl = document.getElementById('current-year-title');
+            const subtitleEl = document.getElementById('current-year-subtitle');
+            const searchCountEl = document.getElementById('search-count');
+
+            const yearData = curriculumData[currentLevel].years[currentYearKey];
+            titleEl.innerHTML = `<span class="w-3 h-8 bg-brand-600 rounded-full inline-block"></span> ${yearData.title}`;
+            subtitleEl.innerText = `${curriculumData[currentLevel].name} - U.E. "Primero de Abril"`;
+
+            grid.innerHTML = '';
+            let totalMatches = 0;
+
+            yearData.units.forEach(unit => {
+                // Verificar si la unidad coincide con la búsqueda
+                const titleMatch = unit.title.toLowerCase().includes(searchQuery);
+                const themesMatches = unit.themes.filter(t => t.toLowerCase().includes(searchQuery));
+                const dcdMatches = unit.dcd.filter(d => d.toLowerCase().includes(searchQuery));
+                const objMatches = unit.objectives.filter(o => o.toLowerCase().includes(searchQuery));
+
+                const isMatch = !searchQuery || titleMatch || themesMatches.length > 0 || dcdMatches.length > 0 || objMatches.length > 0;
+
+                if (isMatch) {
+                    totalMatches++;
+
+                    // Crear tarjeta de unidad
+                    const card = document.createElement('div');
+                    card.className = "bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden card-print relative group";
+
+                    card.innerHTML = `
+                        <!-- Header de la Unidad -->
+                        <div class="p-4 sm:p-5 bg-gradient-to-r from-slate-900 to-slate-800 text-white flex items-start justify-between gap-3">
+                            <div>
+                                <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-brand-500/30 text-brand-200 border border-brand-400/30 mb-1">
+                                    Unidad Didáctica 0${unit.id}
+                                </span>
+                                <h3 class="font-bold text-sm sm:text-base text-white leading-snug">
+                                    ${highlightMatch(unit.title, searchQuery)}
+                                </h3>
+                            </div>
+                            <span class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center font-bold text-xs text-amber-400 shrink-0 border border-white/10">
+                                U${unit.id}
+                            </span>
+                        </div>
+
+                        <!-- Cuerpo de Temáticas -->
+                        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2.5 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-list-check text-brand-500"></i>
+                                    Temáticas Propuestas
+                                </h4>
+                                <ul class="space-y-2 text-xs text-slate-700">
+                                    ${unit.themes.map(theme => `
+                                        <li class="flex items-start gap-2 bg-slate-50 p-2 rounded-lg border border-slate-100">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-1.5 shrink-0"></span>
+                                            <span class="leading-relaxed">${highlightMatch(theme, searchQuery)}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+
+                            <!-- DCD y Objetivos -->
+                            <div class="pt-3 border-t border-slate-100 space-y-3">
+                                <div>
+                                    <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-graduation-cap text-amber-500"></i>
+                                        Destrezas (DCD)
+                                    </h4>
+                                    <div class="flex flex-wrap gap-1">
+                                        ${unit.dcd.map(code => `
+                                            <span class="inline-block px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+                                                ${highlightMatch(code, searchQuery)}
+                                            </span>
+                                        `).join('')}
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-bullseye text-indigo-500"></i>
+                                        Objetivos
+                                    </h4>
+                                    <div class="flex flex-wrap gap-1">
+                                        ${unit.objectives.map(code => `
+                                            <span class="inline-block px-2 py-0.5 rounded-md text-[11px] font-semibold bg-indigo-50 text-indigo-800 border border-indigo-200/60">
+                                                ${highlightMatch(code, searchQuery)}
+                                            </span>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    grid.appendChild(card);
+                }
+            });
+
+            if (searchQuery) {
+                searchCountEl.innerText = `${totalMatches} unidad(es) encontrada(s)`;
+            }
+
+            if (totalMatches === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        function openObjectivesModal() {
+            const modal = document.getElementById('objectives-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.firstElementChild.classList.remove('scale-95');
+                modal.firstElementChild.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeObjectivesModal(e) {
+            const modal = document.getElementById('objectives-modal');
+            modal.classList.add('opacity-0');
+            modal.firstElementChild.classList.remove('scale-100');
+            modal.firstElementChild.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        function switchModalTab(tab) {
+            currentModalTab = tab;
+            const tabEgb = document.getElementById('modal-tab-egb');
+            const tabBgu = document.getElementById('modal-tab-bgu');
+
+            if (tab === 'EGB') {
+                tabEgb.className = 'pb-3 text-xs sm:text-sm font-bold border-b-2 border-brand-600 text-brand-600 transition';
+                tabBgu.className = 'pb-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-700 transition';
+            } else {
+                tabBgu.className = 'pb-3 text-xs sm:text-sm font-bold border-b-2 border-brand-600 text-brand-600 transition';
+                tabEgb.className = 'pb-3 text-xs sm:text-sm font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-700 transition';
+            }
+
+            renderModalContent();
+        }
+
+        function renderModalContent() {
+            const container = document.getElementById('modal-content');
+            const items = referenceObjectives[currentModalTab];
+
+            container.innerHTML = items.map(item => `
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-brand-300 transition flex flex-col sm:flex-row gap-3 items-start">
+                    <span class="inline-block px-3 py-1 rounded-xl text-xs font-extrabold bg-brand-600 text-white shrink-0 shadow-sm">
+                        ${item.code}
+                    </span>
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed pt-0.5">
+                        ${item.desc}
+                    </p>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>
