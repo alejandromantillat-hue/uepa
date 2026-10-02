@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Temáticas de Física BGU - U.E. "Primero de Abril"</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22',
+                        },
+                        mint: {
+                            100: '#e6f7f2',
+                            200: '#c3efe1',
+                            300: '#90e0c8',
+                            400: '#54cca8',
+                            500: '#2bb38e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4fbf7;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #ecfdf5;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #a7f3d0;
+            border-radius: 9999px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #34d399;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col selection:bg-emerald-200 selection:text-emerald-900">
+
+    <!-- Header Principal -->
+    <header class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-800 text-white shadow-xl border-b border-emerald-700/40 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 text-xs font-semibold uppercase tracking-wider mb-3">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                        Año Lectivo 2026-2027
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white drop-shadow-sm">
+                        Unidad Educativa "Primero de Abril"
+                    </h1>
+                    <p class="text-emerald-200/90 text-sm sm:text-base font-medium mt-1 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>
+                        Latacunga - Cotopaxi | Área de Matemática y Física
+                    </p>
+                </div>
+                <div class="bg-emerald-900/60 backdrop-blur-md p-4 rounded-2xl border border-emerald-700/50 shadow-inner flex flex-col justify-center">
+                    <span class="text-xs font-semibold text-emerald-300 uppercase tracking-wider">Documento Técnico</span>
+                    <span class="text-sm font-bold text-white mt-0.5">Propuesta de Temáticas de Física BGU</span>
+                    <span class="text-xs text-emerald-200 mt-1 flex items-center gap-1">
+                        <i data-lucide="user-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                        Mg. Alejandro Mantilla (Coordinador)
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Selector de Nivel & Buscador -->
+        <section class="flex flex-col lg:flex-row gap-4 items-stretch justify-between">
+            
+            <!-- Selector de Nivel BGU -->
+            <div class="bg-white p-2 rounded-2xl shadow-sm border border-emerald-100 flex flex-wrap sm:flex-nowrap gap-2 flex-grow lg:flex-grow-0">
+                <button onclick="changeLevel('1')" id="btn-level-1" class="level-btn flex-1 sm:flex-none px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-emerald-600 text-white shadow-md shadow-emerald-600/20">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                    1.º BGU
+                </button>
+                <button onclick="changeLevel('2')" id="btn-level-2" class="level-btn flex-1 sm:flex-none px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2 text-emerald-800 hover:bg-emerald-50">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                    2.º BGU
+                </button>
+                <button onclick="changeLevel('3')" id="btn-level-3" class="level-btn flex-1 sm:flex-none px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2 text-emerald-800 hover:bg-emerald-50">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                    3.º BGU
+                </button>
+            </div>
+
+            <!-- Buscador Rápido -->
+            <div class="relative flex-grow max-w-md">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-emerald-600">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </div>
+                <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Buscar por tema, DCD (ej: CN.F.5.1.1) u objetivo..." class="w-full pl-11 pr-10 py-3.5 bg-white border border-emerald-200 rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm text-slate-800 placeholder-slate-400 transition-all">
+                <button onclick="clearSearch()" id="clearSearchBtn" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-emerald-600">
+                    <i data-lucide="x-circle" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Resumen Cuantitativo / Panel Estadístico -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-gradient-to-br from-emerald-800 to-emerald-900 text-white p-5 rounded-2xl shadow-md border border-emerald-700/50 flex items-center gap-4">
+                <div class="p-3 bg-emerald-700/50 rounded-xl text-emerald-300 border border-emerald-600/50">
+                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-emerald-200 font-semibold uppercase tracking-wider">Unidades (Año)</p>
+                    <p class="text-2xl font-extrabold" id="stat-units">6</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-emerald-100 flex items-center gap-4">
+                <div class="p-3 bg-emerald-100 rounded-xl text-emerald-700">
+                    <i data-lucide="list-checks" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Temas (Año)</p>
+                    <p class="text-2xl font-extrabold text-emerald-900" id="stat-topics">24</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-emerald-100 flex items-center gap-4">
+                <div class="p-3 bg-emerald-100 rounded-xl text-emerald-700">
+                    <i data-lucide="target" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">DCD (Nivel Actual)</p>
+                    <p class="text-2xl font-extrabold text-emerald-900" id="stat-dcd">18</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-emerald-100 flex items-center gap-4">
+                <div class="p-3 bg-emerald-100 rounded-xl text-emerald-700">
+                    <i data-lucide="layers" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Total DCD BGU</p>
+                    <p class="text-2xl font-extrabold text-emerald-900">60</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Indicator for Active Filter / Search -->
+        <div id="searchIndicator" class="hidden bg-emerald-100/70 border border-emerald-200 p-4 rounded-xl flex items-center justify-between text-emerald-900 text-sm font-medium">
+            <span class="flex items-center gap-2">
+                <i data-lucide="filter" class="w-4 h-4 text-emerald-600"></i>
+                Resultados filtrados para: <strong id="searchQueryText" class="text-emerald-950"></strong>
+            </span>
+            <button onclick="clearSearch()" class="text-xs bg-white text-emerald-800 hover:bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-300 font-semibold transition-colors">
+                Limpiar filtro
+            </button>
+        </div>
+
+        <!-- Contenedor de Unidades Didácticas -->
+        <section id="unitsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Rendered dynamically -->
+        </section>
+
+        <!-- Mensaje sin resultados -->
+        <div id="noResults" class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-emerald-200 p-8 shadow-sm">
+            <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="search-x" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800">No se encontraron temáticas</h3>
+            <p class="text-sm text-slate-500 mt-1 max-w-md mx-auto">No hay coincidencia con los términos ingresados en este nivel o en toda la propuesta. Pruebe buscando con otra palabra o código DCD.</p>
+            <button onclick="clearSearch()" class="mt-4 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm rounded-xl transition-all shadow-sm">
+                Restablecer búsqueda
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-emerald-200 border-t border-emerald-900 mt-12 py-8 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-emerald-800 border border-emerald-700 flex items-center justify-center text-emerald-300 font-bold">
+                    1A
+                </div>
+                <div>
+                    <p class="font-bold text-white">Unidad Educativa "Primero de Abril"</p>
+                    <p class="text-xs text-emerald-400">Área de Matemática y Física | BGU 2026-2027</p>
+                </div>
+            </div>
+            <p class="text-xs text-emerald-400 text-center md:text-right">
+                Referente Curricular: Currículo Priorizado con Énfasis en Competencias (2025)<br>
+                Ministerio de Educación del Ecuador
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Data Structure
+        const physicsData = {
+            "1": {
+                name: "1.º BGU",
+                subtitle: "Bases de la Mecánica de la Partícula en 1D y 2D",
+                totalDCD: 18,
+                units: [
+                    {
+                        number: 1,
+                        title: "Cinemática Rectilínea de la Partícula: MRU y MRUV",
+                        topics: [
+                            "Movimiento Rectilíneo Uniforme (MRU): posición, trayectoria, rapidez y desplazamiento en el sistema de referencia.",
+                            "Magnitudes del Movimiento Rectilíneo Uniformemente Variado (MRUV): velocidad media e instantánea, aceleración media e instantánea.",
+                            "Elaboración e interpretación de gráficas posición-tiempo y velocidad-tiempo para MRU y MRUV.",
+                            "Ecuaciones cinemáticas del MRU y MRUV en la resolución de problemas aplicados."
+                        ],
+                        dcd: ["CN.F.5.1.1", "CN.F.5.1.3", "CN.F.5.1.4", "CN.F.5.1.2 (Soporte)"],
+                        objectives: ["O.CN.F.1", "O.CN.F.3", "O.CN.F.5"]
+                    },
+                    {
+                        number: 2,
+                        title: "Dinámica Lineal y Leyes de Newton",
+                        topics: [
+                            "Concepto de fuerza como magnitud de naturaleza vectorial.",
+                            "Segunda ley de Newton: relación de aceleración, fuerza y masa del objeto.",
+                            "Tercera ley de Newton y su aplicación en situaciones reales.",
+                            "Sistemas de referencia inerciales y no inerciales con diagramas de cuerpo libre."
+                        ],
+                        dcd: ["CN.F.5.1.17", "CN.F.5.1.18", "CN.F.5.1.19", "CN.F.5.1.20"],
+                        objectives: ["O.CN.F.2", "O.CN.F.5", "O.CN.F.9"]
+                    },
+                    {
+                        number: 3,
+                        title: "Cantidad de Movimiento Lineal y Colisiones",
+                        topics: [
+                            "Relación entre la masa de un objeto y su velocidad: cantidad de movimiento.",
+                            "Definición del impulso de una fuerza y su relación con el momento lineal.",
+                            "Ley de conservación de la cantidad de movimiento lineal en sistemas aislados.",
+                            "Demostración de que la fuerza es la variación de momento lineal en el tiempo."
+                        ],
+                        dcd: ["CN.F.5.1.22", "CN.F.5.1.23"],
+                        objectives: ["O.CN.F.2", "O.CN.F.3", "O.CN.F.5"]
+                    },
+                    {
+                        number: 4,
+                        title: "Caída Libre y Campo Gravitatorio Terrestre",
+                        topics: [
+                            "Lanzamiento vertical y caída libre como casos concretos del movimiento unidimensional con aceleración g constante.",
+                            "Ecuaciones del movimiento vertical y caída libre aplicadas a la solución de problemas prácticos.",
+                            "Intensidad del campo gravitatorio y su determinación de la fuerza del peso del objeto.",
+                            "Fuerza de rozamiento del aire y el fenómeno de la rapidez terminal de un cuerpo en caída libre."
+                        ],
+                        dcd: ["CN.F.5.1.25", "CN.F.5.1.26", "CN.F.5.1.27"],
+                        objectives: ["O.CN.F.5", "O.CN.F.7", "O.CN.F.8"]
+                    },
+                    {
+                        number: 5,
+                        title: "Movimiento en Dos Dimensiones y Movimiento Parabólico",
+                        topics: [
+                            "Análisis vectorial en el plano: diferencias entre vector posición y vector desplazamiento para diferentes instantes.",
+                            "Vector velocidad instantánea, velocidad promedio y dirección tangente a la trayectoria.",
+                            "Movimiento parabólico (lanzamiento de proyectiles): coordenadas horizontales (MRU) y verticales (MRUV) de la trayectoria.",
+                            "Alcance horizontal, altura máxima, tiempo de vuelo y su relación con el ángulo de lanzamiento en el movimiento parabólico."
+                        ],
+                        dcd: ["CN.F.5.1.7", "CN.F.5.1.9", "CN.F.5.1.29"],
+                        objectives: ["O.CN.F.3", "O.CN.F.5", "O.CN.F.9"]
+                    },
+                    {
+                        number: 6,
+                        title: "Fuerzas de Contacto y Elasticidad",
+                        topics: [
+                            "Fuerzas de compresión y de tracción que causan deformación en los objetos.",
+                            "Fuerza elástica de un resorte y Ley de Hooke experimental.",
+                            "Modelo matemático de proporcionalidad dirigida hacia la posición de equilibrio.",
+                            "Análisis gráfico de la característica y rigidez de diferentes resortes."
+                        ],
+                        dcd: ["CN.F.5.1.30", "CN.F.5.1.31"],
+                        objectives: ["O.CN.F.3", "O.CN.F.5", "O.CN.F.9"]
+                    }
+                ]
+            },
+            "2": {
+                name: "2.º BGU",
+                subtitle: "Rotación, MAS, Termodinámica y Electrostática",
+                totalDCD: 21,
+                units: [
+                    {
+                        number: 1,
+                        title: "Cinemática y Dinámica del Movimiento Circular",
+                        topics: [
+                            "Concepto de movimiento circular uniforme (MCU) y de posición angular.",
+                            "Magnitudes angulares (radianes, velocidad y aceleración angular) y análogas lineales.",
+                            "Aceleración normal y aceleración centrípeta en trayectorias circulares.",
+                            "Fuerza centrípeta constante dirigida hacia el centro del círculo."
+                        ],
+                        dcd: ["CN.F.5.1.12", "CN.F.5.1.13", "CN.F.5.1.15", "CN.F.5.1.32"],
+                        objectives: ["O.CN.F.5", "O.CN.F.7", "O.CN.F.9"]
+                    },
+                    {
+                        number: 2,
+                        title: "Movimiento Armónico Simple (MAS)",
+                        topics: [
+                            "Cinemática del MAS y deducción analítica con funciones seno o coseno.",
+                            "Analogías entre el MAS y el movimiento circular (amplitud y frecuencia angular).",
+                            "Fuerzas involucradas en MCU aplicadas al MAS (resorte estirado o comprimido).",
+                            "Conservación de energía mecánica horizontal y vertical de un resorte."
+                        ],
+                        dcd: ["CN.F.5.1.34", "CN.F.5.1.31 (Articulación)"],
+                        objectives: ["O.CN.F.2", "O.CN.F.5", "O.CN.F.9"]
+                    },
+                    {
+                        number: 3,
+                        title: "Trabajo, Energía y Potencia",
+                        topics: [
+                            "Trabajo mecánico con fuerzas constantes en desplazamientos rectilíneos.",
+                            "Energía mecánica y teorema del trabajo como variación de energía.",
+                            "Conservación de energía mecánica en sistemas físicos conservativos.",
+                            "Definición de potencia a partir del ritmo temporal de transferencia de energía."
+                        ],
+                        dcd: ["CN.F.5.2.1", "CN.F.5.2.2", "CN.F.5.2.4"],
+                        objectives: ["O.CN.F.3", "O.CN.F.5", "O.CN.F.7"]
+                    },
+                    {
+                        number: 4,
+                        title: "Energía Térmica y Termodinámica",
+                        topics: [
+                            "Temperatura como energía cinética promedio de las partículas de una sustancia.",
+                            "Calor específico, calor latente, cambios de estado y equilibrio térmico.",
+                            "Trabajo mecánico por energía térmica de un sistema y máquinas térmicas.",
+                            "Eficiencia real en motores y disminución del orden con el tiempo (entropía)."
+                        ],
+                        dcd: ["CN.F.5.2.7", "CN.F.5.2.8", "CN.F.5.2.9", "CN.F.5.2.10", "CN.F.5.2.11"],
+                        objectives: ["O.CN.F.2", "O.CN.F.3", "O.CN.F.5", "O.CN.F.7"]
+                    },
+                    {
+                        number: 5,
+                        title: "Electrostática y Ley de Coulomb",
+                        topics: [
+                            "Origen atómico de la carga eléctrica (electrón, protón) y fuerzas de atracción/repulsión.",
+                            "Tipo de materiales según su conductividad: modelo del gas de electrones.",
+                            "Dispositivos de uso cotidiano que separan cargas eléctricas.",
+                            "Ley de Coulomb: cuantificación de la fuerza electrostática vectorial."
+                        ],
+                        dcd: ["CN.F.5.1.38", "CN.F.5.1.41", "CN.F.5.1.42", "CN.F.5.1.43"],
+                        objectives: ["O.CN.F.2", "O.CN.F.5", "O.CN.F.8"]
+                    },
+                    {
+                        number: 6,
+                        title: "Campo Eléctrico y Circuitos de Corriente Continua",
+                        topics: [
+                            "Campo eléctrico de una carga puntual y visualización de líneas de campo.",
+                            "Relación entre diferencia de potencial (voltaje), corriente y resistencia: Ley de Ohm.",
+                            "Leyes de conservación de la carga y la energía en circuitos sencillos.",
+                            "Calentamiento de Joule: determinación de la potencia disipada por resistencia."
+                        ],
+                        dcd: ["CN.F.5.1.45", "CN.F.5.1.49", "CN.F.5.1.51"],
+                        objectives: ["O.CN.F.3", "O.CN.F.5", "O.CN.F.9"]
+                    }
+                ]
+            },
+            "3": {
+                name: "3.º BGU",
+                subtitle: "Electromagnetismo, Física Cuántica, Relatividad y Tecnología",
+                totalDCD: 21,
+                units: [
+                    {
+                        number: 1,
+                        title: "Magnetismo y Circuitos de Cargas",
+                        topics: [
+                            "Campo magnético vectorial y su fuerza uniforme sobre partículas cargadas en movimiento.",
+                            "Fuentes de campo magnético: materiales magnéticos y corrientes eléctricas.",
+                            "Funcionamiento del motor eléctrico por la acción de fuerzas magnéticas.",
+                            "Ley de Ampère: circulación del campo en un camino cerrado y corriente encerrada."
+                        ],
+                        dcd: ["CN.F.5.1.54", "CN.F.5.1.55", "CN.F.5.1.57"],
+                        objectives: ["O.CN.F.5", "O.CN.F.7", "O.CN.F.8", "O.CN.F.9"]
+                    },
+                    {
+                        number: 2,
+                        title: "Movimiento Ondulatorio y Óptica",
+                        topics: [
+                            "Perturbación ondulatoria y relaciones entre amplitud, periodo y frecuencia.",
+                            "Velocidad de propagación de ondas según las propiedades físicas del medio.",
+                            "Ondas mecánicas y no mecánicas, longitudinales y transversales.",
+                            "Reflexión y refracción de ondas e imágenes en lentes y espejos (modelo de rayos)."
+                        ],
+                        dcd: ["CN.F.5.3.1", "CN.F.5.3.2", "CN.F.5.3.3", "CN.F.5.3.4"],
+                        objectives: ["O.CN.F.3", "O.CN.F.5", "O.CN.F.9"]
+                    },
+                    {
+                        number: 3,
+                        title: "Inducción Electromagnética y Ondas de Luz",
+                        topics: [
+                            "Generación de campos variables cruzados (campos magnéticos y eléctricos variables).",
+                            "Inducción de Faraday y mecanismo físico de la radiación electromagnética.",
+                            "Dualidad onda-partícula de la luz: velocidad de propagación en el vacío.",
+                            "Espectro electromagnético y sus aplicaciones en dispositivos de uso diario."
+                        ],
+                        dcd: ["CN.F.5.3.6", "CN.F.5.3.7", "CN.F.5.3.8"],
+                        objectives: ["O.CN.F.2", "O.CN.F.5", "O.CN.F.8"]
+                    },
+                    {
+                        number: 4,
+                        title: "Gravitación Universal y Mecánica Celeste",
+                        topics: [
+                            "Ley de Gravitación Universal de Newton, leyes de Kepler y sistema Copernicano.",
+                            "El rol de la Misión Geodésica Francesa y Pedro Vicente Maldonado en Ecuador.",
+                            "Acción a distancia y su explicación mediante el concepto de campo gravitacional.",
+                            "Límites del Sistema Solar (cinturón de Kuiper, nube de Oort, cometas, asteroides)."
+                        ],
+                        dcd: ["CN.F.5.4.2", "CN.F.5.4.3"],
+                        objectives: ["O.CN.F.1", "O.CN.F.6", "O.CN.F.8"]
+                    },
+                    {
+                        number: 5,
+                        title: "Introducción a la Física Cuántica, Relatividad y Cosmología",
+                        topics: [
+                            "Radiación del cuerpo negro, efecto fotoeléctrico e hipótesis del fotón (Planck).",
+                            "Principio de incertidumbre de Heisenberg a escala atómica.",
+                            "Radiactividad: emisiones radiactivas (alfa, beta, gamma) y fuerza nuclear débil.",
+                            "Modelo estándar Lambda-CDM como explicación del universo y la materia/energía oscura."
+                        ],
+                        dcd: ["CN.F.5.5.1", "CN.F.5.5.4", "CN.F.5.5.7", "CN.F.5.5.14"],
+                        objectives: ["O.CN.F.2", "O.CN.F.6", "O.CN.F.8"]
+                    },
+                    {
+                        number: 6,
+                        title: "Fuerzas Fundamentales y Tecnología",
+                        topics: [
+                            "Importancia de las cuatro fuerzas fundamentales (fuerte, débil, electromagnética, gravitacional).",
+                            "Ejemplificación de los avances de la mecatrónica al servicio de la sociedad ecuatoriana.",
+                            "Incidencia del electromagnetismo, la mecánica cuántica y la nanotecnología en la sociedad.",
+                            "Efectos de la tecnología en la revolución de las industrias y sus desafíos científicos."
+                        ],
+                        dcd: ["CN.F.5.5.8", "CN.F.5.6.2", "CN.F.5.6.4", "CN.F.5.6.5", "CN.F.5.6.6"],
+                        objectives: ["O.CN.F.1", "O.CN.F.7", "O.CN.F.8"]
+                    }
+                ]
+            }
+        };
+
+        // Current Application State
+        let currentLevel = '1';
+
+        // Initialize icons on load
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderContent();
+        });
+
+        // Switch Grade Level
+        function changeLevel(level) {
+            currentLevel = level;
+            
+            // Update Tab Styles
+            document.querySelectorAll('.level-btn').forEach((btn, index) => {
+                const btnLevel = (index + 1).toString();
+                if (btnLevel === level) {
+                    btn.className = "level-btn flex-1 sm:flex-none px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2 bg-emerald-600 text-white shadow-md shadow-emerald-600/20";
+                } else {
+                    btn.className = "level-btn flex-1 sm:flex-none px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2 text-emerald-800 hover:bg-emerald-50";
+                }
+            });
+
+            renderContent();
+        }
+
+        // Search Handlers
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            const clearBtn = document.getElementById('clearSearchBtn');
+            const indicator = document.getElementById('searchIndicator');
+            const queryText = document.getElementById('searchQueryText');
+
+            if (query.length > 0) {
+                clearBtn.classList.remove('hidden');
+                indicator.classList.remove('hidden');
+                queryText.textContent = `"${query}"`;
+            } else {
+                clearBtn.classList.add('hidden');
+                indicator.classList.add('hidden');
+            }
+
+            renderContent();
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            document.getElementById('searchIndicator').classList.add('hidden');
+            renderContent();
+        }
+
+        // Render UI Content
+        function renderContent() {
+            const container = document.getElementById('unitsContainer');
+            const noResults = document.getElementById('noResults');
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const levelData = physicsData[currentLevel];
+
+            // Update Statistics
+            document.getElementById('stat-units').textContent = levelData.units.length;
+            document.getElementById('stat-dcd').textContent = levelData.totalDCD;
+            
+            let filteredUnits = [];
+
+            if (query === '') {
+                filteredUnits = levelData.units;
+            } else {
+                // Search filter across title, topics, dcd, and objectives
+                filteredUnits = levelData.units.filter(unit => {
+                    const matchTitle = unit.title.toLowerCase().includes(query);
+                    const matchTopics = unit.topics.some(t => t.toLowerCase().includes(query));
+                    const matchDcd = unit.dcd.some(d => d.toLowerCase().includes(query));
+                    const matchObj = unit.objectives.some(o => o.toLowerCase().includes(query));
+                    return matchTitle || matchTopics || matchDcd || matchObj;
+                });
+            }
+
+            if (filteredUnits.length === 0) {
+                container.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            container.innerHTML = filteredUnits.map(unit => {
+                // Highlight matches if search active
+                const highlightText = (text) => {
+                    if (!query) return text;
+                    const regex = new RegExp(`(${query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')})`, 'gi');
+                    return text.replace(regex, '<mark class="bg-amber-200 text-amber-900 rounded px-0.5">$1</mark>');
+                };
+
+                return `
+                    <div class="bg-white rounded-2xl border border-emerald-100 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+                        
+                        <!-- Card Header -->
+                        <div class="p-6 bg-gradient-to-b from-emerald-50/60 to-transparent border-b border-emerald-100/80">
+                            <div class="flex items-start justify-between gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-lg bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider border border-emerald-200">
+                                    Unidad ${unit.number}
+                                </span>
+                                <span class="text-xs font-medium text-emerald-600 flex items-center gap-1">
+                                    <i data-lucide="book-marked" class="w-3.5 h-3.5"></i>
+                                    Física ${levelData.name}
+                                </span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-emerald-700 transition-colors">
+                                ${highlightText(unit.title)}
+                            </h3>
+                        </div>
+
+                        <!-- Card Body: Topics -->
+                        <div class="p-6 flex-grow space-y-4">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-900/70 flex items-center gap-1.5">
+                                <i data-lucide="layers" class="w-4 h-4 text-emerald-600"></i>
+                                Temáticas Propuestas (4)
+                            </h4>
+                            <ul class="space-y-2.5">
+                                ${unit.topics.map((topic, idx) => `
+                                    <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[10px] flex-shrink-0 mt-0.5">
+                                            ${idx + 1}
+                                        </span>
+                                        <span class="flex-grow">${highlightText(topic)}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <!-- Card Footer: DCD & Objectives -->
+                        <div class="p-6 bg-emerald-50/40 border-t border-emerald-100 space-y-4 rounded-b-2xl">
+                            
+                            <!-- DCD -->
+                            <div>
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-emerald-900/80 flex items-center gap-1 mb-2">
+                                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                    Destrezas (DCD):
+                                </h5>
+                                <div class="flex flex-wrap gap-1.5">
+                                    ${unit.dcd.map(code => `
+                                        <span class="px-2.5 py-1 bg-white border border-emerald-200 rounded-md text-xs font-semibold text-emerald-800 shadow-2xs">
+                                            ${highlightText(code)}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                            </div>
+
+                            <!-- Objetivos -->
+                            <div>
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-emerald-900/80 flex items-center gap-1 mb-2">
+                                    <i data-lucide="target" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                    Objetivos de Área:
+                                </h5>
+                                <div class="flex flex-wrap gap-1.5">
+                                    ${unit.objectives.map(obj => `
+                                        <span class="px-2 py-0.5 bg-emerald-100/80 border border-emerald-200/80 rounded text-xs font-semibold text-emerald-900">
+                                            ${highlightText(obj)}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                `;
+            }).join('');
+
+            // Re-initialize dynamic lucide icons
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
